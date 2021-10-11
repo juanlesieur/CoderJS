@@ -8,13 +8,14 @@ const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', e => {
   fetchData()
   if(localStorage.getItem('carrito')){
     carrito = JSON.parse(localStorage.getItem('carrito'))
     pintarCarrito()
   }
-})
+});
+
 //Detectamos el boton de compra
 cards.addEventListener('click', e => {
   addCarrito(e)
@@ -48,6 +49,8 @@ const pintarCards = data =>{
   cards.appendChild(fragment)
 }
 
+//Agregar al carrito
+
 const addCarrito = e => {
   //console.log(e.target)
   //console.log(e.target.classList.contains('btn-dark'))
@@ -60,6 +63,7 @@ const addCarrito = e => {
 
 //Captura los elementos enviados al carrito
 const setCarrito = objeto => {
+  //console.log(objeto)
   const producto ={
     id: objeto.querySelector('.btn-dark').dataset.id,
     titulo: objeto.querySelector('h5').textContent,
@@ -72,6 +76,8 @@ const setCarrito = objeto => {
   }
 
   carrito[producto.id] = {...producto}
+
+  pintarCarrito()
 
 }
 
@@ -86,6 +92,7 @@ const pintarCarrito = () =>{
     templateCarrito.querySelector('.btn-info').dataset.id = producto.id
     templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
     templateCarrito.querySelector('span').textContent = prodcuto.cantidad * producto.precio
+    
     const clone = templateCarrito.cloneNode(true)
     fragment.appendChild(clone)
   })
