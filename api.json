@@ -1,0 +1,46 @@
+[
+    {
+        "precio": "$900",
+        "id": 1,
+        "titulo": "Arcoiris",
+        "categoria": "Kids",
+        "imagen": "./Imagenes/Kids/imagenkids1.jpg"
+    },
+    {
+        "precio": "$1000",
+        "id": 2,
+        "titulo": "Mielcita",
+        "categoria": "Kids",
+        "imagen": "./Imagenes/Kids/imagenkids2.jpg"
+    },
+    {
+        "precio": "$1100",
+        "id": 3,
+        "titulo": "Dino!",
+        "categoria": "Kids",
+        "imagen": "./Imagenes/Kids/imagenkids3.jpg"
+    },
+    {
+        "precio": "$900",
+        "id": 4,
+        "titulo": "Cohete!",
+        "categoria": "Kids",
+        "imagen": "./Imagenes/Kids/imagenkids4.jpg"
+    },
+    {
+        "precio": "$1000",
+        "id": 5,
+        "titulo": "Monitoo",
+        "categoria": "Kids",
+        "imagen": "./Imagenes/Kids/imagenkids5.jpg"
+    },
+    {
+        "precio": "$1100",
+        "id": 6,
+        "titulo": "Ohana!",
+        "categoria": "Kids",
+        "imagen": "./Imagenes/Kids/imagenkids6.jpg"
+    }
+
+
+]
